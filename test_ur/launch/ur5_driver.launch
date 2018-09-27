@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<launch>
+
+ <!--  <include file="$(find robot_slam)/launch/robot_amcl.launch"/> -->
+ 
+  <include file="$(find ur_modern_driver)/launch/ur5_bringup.launch">
+      <arg name="limited" value="true"/>
+      <arg name="robot_ip" value="192.168.0.18"/>
+  </include>
+ <!--
+  <include file="$(find ur5_moveit_config)/launch/ur5_moveit_planning_execution.launch">
+      <arg name="limited" value="true"/>
+  </include>
+
+
+   <include file="$(find ur5_moveit_config)/launch/moveit_rviz.launch">
+      <arg name="config" value="true"/>
+  </include>
+  
+    <include file="$(find robot_drive)/launch/robot_joystick.launch">
+    </include>
+    -->
+    <!-- joy  ur5 
+   <node name="moveit_ur5_fish_82" pkg="ar_track_tags" type="moveit_ur5_fish_82" output="screen"/>
+    -->
+  
+    <!-- on_goal 
+    <node name="goal_reached" pkg="ar_track_tags" type="goal_reached" output="screen"/>
+   -->
+ <!--
+  <include file="$(find ar_track_tags)/launch/zed_ar_detection.launch">
+  </include>
+
+  
+  <include file="$(find zed_cpu_ros)/launch/zed_cpu_ros.launch">
+  </include>
+   -->
+</launch>

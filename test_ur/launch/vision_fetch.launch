@@ -1,0 +1,9 @@
+<?xml version = "1.0" ?>
+<launch>      
+   <include file="$(find zed_cpu_ros)/launch/zed_cpu_ros.launch"/>
+   <include file="$(find ar_track_tags)/launch/zed_ar_detection.launch">
+        <arg name="marker_size" default="3.0"/>　　	<!--4.4966为二维码的边长-->
+	<arg name="max_new_marker_error" default="0.08" />
+	<arg name="max_track_error" default="0.2" />   
+   </include>
+</launch>
